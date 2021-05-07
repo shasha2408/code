@@ -131,7 +131,7 @@ Evaluation result sample:
 
 ### Evaluate a user-defined method
 
-We have integrated the overall evaluation protocol within a easy-to-use function, which could be used as shown in the [demo/evaluation_demo.py](https://github.com/ase21-843/code/blob/main/demo/evaluation_demo.py).  If ``anomaly_score`` and ``anomaly_label`` are provided, thresholds iteration could be conducted. In addition, if ``anomaly_score_train`` is given (optional), a threshold can be automatically selected via EVT.
+We have integrated the overall evaluation protocol within an easy-to-use function, which could be used as shown in the [demo/evaluation_demo.py](https://github.com/ase21-843/code/blob/main/demo/evaluation_demo.py).  If ``anomaly_score`` and ``anomaly_label`` are provided, thresholds iteration could be conducted. In addition, if ``anomaly_score_train`` is given (optional), a threshold can be automatically selected via EVT.
 
 ```python
 num_points = 65535
