@@ -25,7 +25,7 @@ Our evaluation protocol consists of following four metrics to evaluate an anomal
 
 ### Datasets 
 
-The following datasets are kindly released by different institutions or schools. Raw datasets could be downloaded or applied from the link right behind the dataset names. The processed datasets can be found [here](processed_link)⬇️ (SMD, SMAP, and MSL).
+The following datasets are kindly released by different institutions or schools. Raw datasets could be downloaded or applied from the link right behind the dataset names. The processed datasets can be found [here](https://drive.google.com/drive/folders/1NEGyB4y8CvUB8TX2Wh83Eas_QHtufGPR?usp=sharing)⬇️ (SMD, SMAP, and MSL).
 
 - Server Machine Datase (**SMD**) [Download raw datasets⬇️](https://github.com/NetManAIOps/OmniAnomaly.git)
 
