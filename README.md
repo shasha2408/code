@@ -17,7 +17,7 @@ Our evaluation protocol consists of following four metrics to evaluate an anomal
 
 - **Salience**: *how much can a model highlight an anomaly?*
 
-  ![Salience computation](https://tva1.sinaimg.cn/large/008i3skNgy1gq8p2r5oyuj31ek0li0xn.jpg)
+  ![Salience computation](docs/imgs/salience_computation.png)
 
 - **Delay**: *how timely can a model report an anomaly?*
 
@@ -48,6 +48,8 @@ The following datasets are kindly released by different institutions or schools.
 ### Requirement
 
 > git clone https://github.com/ase21-843/code
+>
+> cd ./code
 >
 > pip install -r requirements.txt  
 
@@ -100,8 +102,6 @@ anomaly_label = records["anomaly_label"] #num_testing_points x 1
 
 # 8. evaluation
 ```
-
-
 
 ### Evaluate a user-defined method
 
