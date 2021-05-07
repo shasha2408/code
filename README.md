@@ -101,13 +101,95 @@ anomaly_score = records["score"] # num_testing_points x 1
 anomaly_label = records["anomaly_label"] #num_testing_points x 1
 
 # 8. evaluation
+evaluate_all(anomaly_score, anomaly_label)
+
+​```
+Evaluation result sample:
+1.AUC
+        0.864
+2.Salience
+        0.4181
+3.Iteration Based
+        adj_f1
+                0.9335
+        adj_precision
+                0.8752
+        adj_recall
+                1.0
+        delay
+                1
+        f1
+                0.3821
+        precision
+                0.6544
+        recall
+                0.2699
+        theta
+                0.0101
+​```
 ```
 
 ### Evaluate a user-defined method
 
+We have integrated the overall evaluation protocol within a easy-to-use function, which could be used as shown in the [demo/evaluation_demo.py](https://github.com/ase21-843/code/blob/main/demo/evaluation_demo.py).  If ``anomaly_score`` and ``anomaly_label`` are provided, thresholds iteration could be conducted. In addition, if ``anomaly_score_train`` is given (optional), a threshold can be automatically selected via EVT.
 
+```
+num_points = 65535
+# anomaly labels for every testing observations
+anomaly_label = np.random.choice([0, 1], size=num_points)
 
+# anomaly scores for every testing observations
+anomaly_score = np.random.uniform(0, 1, size=num_points)
 
+# (optional) anomaly score for every training observations
+# if not given, EVT based threshold will not be calculated
+anomaly_score_train = np.random.uniform(0, 1, size=num_points)
+
+# if anomaly_score_train is given, EVT based threshold will be calculated
+metrics_iter, metrics_evt, theta_iter, theta_evt = evaluate_all(anomaly_score, anomaly_label, anomaly_score_train)
+
+​```
+Evaluation result sample:
+1.AUC
+        0.5038
+2.Salience
+        0.1671
+3.Iteration Based
+        adj_f1
+                0.6652
+        adj_precision
+                0.4983
+        adj_recall
+                1.0
+        delay
+                0
+        f1
+                0.6652
+        precision
+                0.4983
+        recall
+                1.0
+        theta
+                0.0
+4.EVT Based
+        adj_f1
+                0.0054
+        adj_precision
+                0.6496
+        adj_recall
+                0.0027
+        delay
+                32
+        f1
+                0.0021
+        precision
+                0.4146
+        recall
+                0.001
+        theta
+                0.001
+​```
+```
 
 ### Models
 
